@@ -8,5 +8,5 @@ class MySpider(scrapy.Spider):
         self.start_urls = ['http://sports.ifeng.com/listpage/31193/1/list.shtml']
 
     def parse(self, response):
-        fw = open('./result.html')
+        fw = open('./result.html','w')
         fw.write(response.body)
